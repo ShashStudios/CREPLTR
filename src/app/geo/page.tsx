@@ -11,6 +11,7 @@ import {
 } from "@vis.gl/react-google-maps";
 import * as turf from "@turf/turf";
 import { addCard, isCardSaved } from "@/lib/crmStore";
+import { UserButton } from "@clerk/nextjs";
 
 const API_KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY!;
 
@@ -917,6 +918,11 @@ function MapInner({ result, loading, loadingStatus, analysisState, searchAreaAcr
         >
           <AddressSearchInput />
           <FilterBar onApply={setAppliedFilters} />
+        </div>
+
+        {/* Floating user profile button */}
+        <div className="absolute top-4 right-4 z-20 bg-white rounded-full shadow-lg border border-zinc-200 p-1.5">
+          <UserButton />
         </div>
 
         <Map

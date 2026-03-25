@@ -27,7 +27,7 @@ export async function runKimiAnalysis(
     });
 
     // Use env var, or discover first available chat model, or fall back to Kimi-k1.5
-    const NON_CHAT_PREFIXES = ["dall-e", "tts", "whisper", "text-embedding", "text-similarity", "text-search", "code-search", "text-davinci", "text-babbage", "text-ada", "text-curie", "davinci", "babbage", "ada", "curie", "aoai-sora", "sora"];
+    const NON_CHAT_PREFIXES = ["dall-e", "tts", "whisper", "text-embedding", "text-similarity", "text-search", "code-", "text-davinci", "text-babbage", "text-ada", "text-curie", "davinci", "babbage", "ada", "curie", "aoai-sora", "sora"];
     let modelName = process.env.AZURE_CHAT_MODEL ?? "Kimi-k1.5";
     if (!process.env.AZURE_CHAT_MODEL) {
       try {
