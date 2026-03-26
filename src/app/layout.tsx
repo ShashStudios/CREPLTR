@@ -14,8 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "CREPLTR",
+  title: "BRIX CRE",
   description: "Industrial Outdoor Storage platform",
+  icons: { icon: "/icon.svg" },
 };
 
 export default function RootLayout({
